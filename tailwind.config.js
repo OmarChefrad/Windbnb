@@ -20,5 +20,5 @@ module.exports = {
       fontFamily: {},
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-hero-patterns")],
 }
