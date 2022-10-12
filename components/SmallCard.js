@@ -4,7 +4,7 @@ import React from "react"
 const SmallCard = ({ img, location, distance }) => {
   return (
     <div className="flex flex-col justify-center items-center m-2 mt-5 space-x-4 rounded-xl cursor-pointer hover:scale-105 transition transform duration-200 ease-out">
-      <div className="relative h-72 w-96 md:h-52 md:w-52 rounded-lg  shadow-lg shadow-blue-500/50">
+      <div className="relative h-32 w-96 md:h-52 md:w-52 rounded-lg  shadow-lg shadow-blue-500/50">
         <Image
           src={img}
           alt="Image"

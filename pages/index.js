@@ -28,8 +28,8 @@ export default function Home({ posts, cardsData }) {
         <div className="max-w-7xl mx-auto px-10 sm:px-16">
           <div className="p-6 md:p-10 pb-0 md:pb-2 space-y-8">
             <h2
-              className="text-2xl md:text-4xl font-serif tracking-[5px] text-blue-200 font-semibold"
-              style={{ textShadow: "2px 2px 1px #057cfd" }}>
+              className="text-2xl md:text-4xl font-serif tracking-[5px] text-blue-200 font-bold"
+              style={{ textShadow: "2px 2px 0.5px #057cfd" }}>
               Explore Nearby
             </h2>
           </div>
@@ -47,7 +47,7 @@ export default function Home({ posts, cardsData }) {
 
             <h2
               className=" p-6  text-2xl md:text-4xl font-serif text-blue-200 font-semibold tracking-[5px]"
-              style={{ textShadow: "2px 2px 1px #057cfd" }}>
+              style={{ textShadow: "2px 2px 0.5px #057cfd" }}>
               Live Anywhere
             </h2>
             <div className="max-w-7xl mx-auto px-8 sm:px-16">
@@ -65,6 +65,7 @@ export default function Home({ posts, cardsData }) {
             </div>
           </div>
         </div>
+        <SimpleMap />
         <LargeCard
           img="https://links.papareact.com/4cj"
           title="The Greatest Outdoors"
@@ -72,7 +73,6 @@ export default function Home({ posts, cardsData }) {
           buttonText="Get Inspired"
         />
         <Footer />
-        <SimpleMap />
       </div>
     </div>
   )
