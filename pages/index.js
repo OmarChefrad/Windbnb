@@ -4,6 +4,8 @@ import Header from "../components/Header"
 import SmallCard from "../components/SmallCard"
 import MeduimCard from "../components/MeduimCard"
 import LargeCard from "../components/LargeCard"
+import Footer from "../components/Footer"
+import SimpleMap from "../components/Map"
 
 export default function Home({ posts, cardsData }) {
   return (
@@ -24,15 +26,15 @@ export default function Home({ posts, cardsData }) {
         <Main />
 
         <div className="max-w-7xl mx-auto px-10 sm:px-16">
-          <div className="p-10  pb-2 space-y-8 ">
+          <div className="p-6 md:p-10 pb-0 md:pb-2 space-y-8">
             <h2
-              className="text-4xl font-serif text-blue-200 font-semibold"
+              className="text-2xl md:text-4xl font-serif tracking-[5px] text-blue-200 font-semibold"
               style={{ textShadow: "2px 2px 1px #057cfd" }}>
               Explore Nearby
             </h2>
           </div>
           <div className="pt-6">
-            <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <section className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  border-solid border-2 border-blue-200 w-full rounded-2xl">
               {posts?.map(({ img, distance, location }) => (
                 <SmallCard
                   key={img}
@@ -44,13 +46,13 @@ export default function Home({ posts, cardsData }) {
             </section>
 
             <h2
-              className=" p-10  text-4xl font-serif text-blue-200 font-semibold"
+              className=" p-6  text-2xl md:text-4xl font-serif text-blue-200 font-semibold tracking-[5px]"
               style={{ textShadow: "2px 2px 1px #057cfd" }}>
               Live Anywhere
             </h2>
             <div className="max-w-7xl mx-auto px-8 sm:px-16">
               <div className="pt-0">
-                <section className="grid grid-cols-1 md:grid-cols-2">
+                <section className="grid grid-cols-1 sm:grid-cols-2 border-solid border-2 border-blue-200 w-full rounded-2xl">
                   {cardsData.map(({ img, title }) => (
                     <MeduimCard
                       key={title}
@@ -61,15 +63,16 @@ export default function Home({ posts, cardsData }) {
                 </section>
               </div>
             </div>
-
-            <LargeCard
-              img="https://links.papareact.com/4cj"
-              title="GreatestOutdoors"
-              description="Wishlists curated by WindBnb."
-              buttonText="Get Inspired"
-            />
           </div>
         </div>
+        <LargeCard
+          img="https://links.papareact.com/4cj"
+          title="The Greatest Outdoors"
+          description="Wishlists curated by WindBnb."
+          buttonText="Get Inspired"
+        />
+        <Footer />
+        <SimpleMap />
       </div>
     </div>
   )

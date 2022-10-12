@@ -9,7 +9,7 @@ export default function Main() {
           backgroundImage:
             "url(https://cdn.discordapp.com/attachments/961369644130766853/1029020468570759188/wallpaperflare.com_wallpaper.jpg)",
         }}>
-        <h1 className="text-white opacity-90 font-serif shadow-gray-900 drop-shadow-2xl text-2xl md:text-4xl font-bold ">
+        <h1 className="text-white opacity-90 font-serif shadow-gray-900 drop-shadow-2xl text-2xl md:text-4xl font-bold tracking-[5px]">
           Dont Know Where To Go? Perfect.
         </h1>
       </div>

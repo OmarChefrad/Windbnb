@@ -15,7 +15,7 @@ const SmallCard = ({ img, location, distance }) => {
 
       <div className="pt-3 ">
         <h2
-          className="font-bold tracking-[5px] text-lg text-blue-200   "
+          className="font-bold tracking-[3px] text-lg text-blue-200   "
           style={{ textShadow: "2px 2px #057cfd" }}>
           {location}
         </h2>

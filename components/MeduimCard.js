@@ -13,7 +13,7 @@ const MeduimCard = ({ img, title }) => {
         />
       </div>
       <div
-        className="pt-3 tracking-[5px] text-lg font-bold text-blue-200"
+        className="pt-3 pl-0 tracking-[3px] text-lg font-bold text-blue-200"
         style={{ textShadow: "2px 2px #057cfd" }}>
         {title}
       </div>
