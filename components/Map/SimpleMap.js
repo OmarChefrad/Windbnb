@@ -1,12 +1,12 @@
 import "leaflet/dist/leaflet.css"
 import { MapContainer, TileLayer } from "react-leaflet"
 
-function App() {
+function SimpleMap({ long, lat }) {
   return (
     <div className="flex justify-center pt-16 px-[10px] rounded-2xl w-full">
       <MapContainer
-        style={{ width: "100%", height: "20rem", borderRadius: "12px" }}
-        center={[35.759465, -5.833954]}
+        style={{ width: "100%", height: "40rem", borderRadius: "12px" }}
+        center={[lat, long]}
         zoom={12}
         scrollWheelZoom={false}>
         <TileLayer
@@ -18,4 +18,4 @@ function App() {
   )
 }
 
-export default App
+export default SimpleMap

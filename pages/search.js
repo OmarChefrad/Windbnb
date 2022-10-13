@@ -4,6 +4,7 @@ import Header from "../components/Header"
 import { useRouter } from "next/router"
 import { format } from "date-fns"
 import InfoCard from "../components/InfoCard"
+import SimpleMap from "../components/Map"
 
 function Search({ searchResults }) {
   const router = useRouter()
@@ -13,12 +14,16 @@ function Search({ searchResults }) {
   const formattedEndDate = format(new Date(endDate), "dd MMMM yy")
   const range = `${formattedStartDate} - ${formattedEndDate}`
 
-  console.log(router.query)
+  const map = searchResults
+  const firstElement = Array.from(map)[0]
+  const long = firstElement.long
+  const lat = firstElement.lat
+  console.log(long, lat)
 
   return (
     <div className="h-screen">
       <Header placeholder={`${location} | ${range} | ${noOfGuests} guests`} />
-      <main className="flex">
+      <main className="flex mb-6">
         <section className="flex-grow pt-8 px-6">
           <p className="text-xs font-sans">
             200+ Stays - - for {noOfGuests} number of guests
@@ -26,7 +31,7 @@ function Search({ searchResults }) {
           <h1 className="text-3xl text-blue-400 font-semibold mt-2 mb-6">
             Stays nearby
           </h1>
-          <div className=" hidden md:inline-flex pb-5 space-x-3 text-gray-800 whitespace-nowrap">
+          <div className="hidden md:inline-flex pb-5 space-x-3 text-gray-800 whitespace-nowrap">
             <p className="button">Cancellation Flexibility</p>
             <p className="button">Type of place</p>
             <p className="button">Price</p>
@@ -47,6 +52,13 @@ function Search({ searchResults }) {
               />
             )
           )}
+        </section>
+        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+          <SimpleMap
+            long={long}
+            lat={lat}
+            key={lat}
+          />
         </section>
       </main>
       <Footer />
