@@ -34,7 +34,7 @@ export default function Home({ posts, cardsData }) {
             </h2>
           </div>
           <div className="pt-6">
-            <section className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  border-solid border-2 border-blue-200 w-full rounded-2xl">
+            <section className=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4  border-solid border-2 border-blue-200 w-full rounded-2xl">
               {posts?.map(({ img, distance, location }) => (
                 <SmallCard
                   key={img}
@@ -44,7 +44,7 @@ export default function Home({ posts, cardsData }) {
                 />
               ))}
             </section>
-
+            
             <h2
               className=" p-6  text-2xl md:text-4xl font-serif text-blue-200 font-semibold tracking-[5px]"
               style={{ textShadow: "2px 2px 0.5px #057cfd" }}>
@@ -52,7 +52,7 @@ export default function Home({ posts, cardsData }) {
             </h2>
             <div className="max-w-7xl mx-auto px-8 sm:px-16">
               <div className="pt-0">
-                <section className="grid grid-cols-1 sm:grid-cols-2 border-solid border-2 border-blue-200 w-full rounded-2xl">
+                <section className="grid grid-cols-1 md:grid-cols-2 border-solid border-2 border-blue-200 w-full rounded-2xl">
                   {cardsData.map(({ img, title }) => (
                     <MeduimCard
                       key={title}
@@ -65,7 +65,7 @@ export default function Home({ posts, cardsData }) {
             </div>
           </div>
         </div>
-        <SimpleMap />
+
         <LargeCard
           img="https://links.papareact.com/4cj"
           title="The Greatest Outdoors"
